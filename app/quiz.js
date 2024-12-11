@@ -71,7 +71,7 @@ const Quiz = ({ selectedTopic, onGoBack }) => {
       {!quizStarted ? (
         <div className="start-section">
           <h1 className="welcome-text">Welcome to HolyTrivia!</h1>
-          <p className="instructions">Let's see how well you know your Bible. Have fun!</p>
+          <p className="instructions">Lets see how well you know your Bible. Have fun!</p>
           <button className="start-button" onClick={handleStartQuiz}>
             Start Quiz
           </button>
@@ -81,7 +81,7 @@ const Quiz = ({ selectedTopic, onGoBack }) => {
           <h2 className="score-text">
             🎉 You scored {score} out of {questions.length}! 🎉
           </h2>
-          <p>Keep the faith! Let's see if you can beat your last score!</p>
+          <p>Keep the faith! Lets see if you can beat your last score!</p>
           <div className="results-buttons">
             <button className="reset-button" onClick={handleRetry}>
               Retry
