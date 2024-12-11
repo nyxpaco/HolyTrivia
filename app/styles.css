@@ -1,0 +1,204 @@
+.header {
+  color: #ffffff;
+  padding: 12px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+  font-family: "Comic Sans MS", cursive;
+  background: linear-gradient(90deg, #ff8bba, #f4a1c1);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: bounce 2s infinite ease-in-out;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.start-section,
+.results-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Background and body*/
+body {
+  margin: 0;
+  font-family: "Verdana", cursive, sans-serif;
+  background: radial-gradient(circle, #f9d1e1, #f6a7c1, #e183bb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/*Game Container*/
+.app {
+  background: linear-gradient(145deg, #ffaad1, #ffbbd9);
+  width: 480px;
+  height: 450px;
+  border-radius: 30px;
+  padding: 25px;
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2),
+    10px -10px 30px rgba(255, 255, 255, 0.3);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.2s ease;
+}
+
+.app:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+}
+
+.topic-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topic-selection button {
+  width: 70%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(145deg, #ff8bba, #f4a1c1);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-selection button:hover {
+  background: linear-gradient(145deg, #f2a8c9, #ff8bb9);
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4);
+}
+
+.topic-selection button:disabled {
+  background: #f0b3c7;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+/*Timer*/
+.timer-bar {
+  width: 100%;
+  height: 18px;
+  background: #ffe3f2;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timer-bar-fill {
+  height: 100%;
+  background-color: #ff6cbf;
+  animation: timer-fill 15s linear infinite;
+}
+
+/*Questions*/
+.question-count span {
+  margin: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.question-text {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 22px;
+  background: #ff8bba;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+/*Answer Options*/
+.answer-options {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.answer-options button {
+  width: 70%;
+  padding: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(145deg, #ff8bba, #f4a1c1);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.answer-options button:hover {
+  background: linear-gradient(145deg, #f2a8c9, #ff8bb9);
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4);
+}
+
+.answer-options button:disabled {
+  background: #f0b3c7;
+  color: #ddd;
+  cursor: not-allowed;
+}
+
+/*Buttons*/
+.start-button,
+.reset-button {
+  margin-top: 25px;
+  font-size: 20px;
+  justify-content: center;
+}
+
+button {
+  width: 250px;
+  font-size: 20px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff80bf, #ff98cc);
+  border-radius: 30px;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff62b2, #ff80bf);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.3);
+}
+
+
+/*Animations*/
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes timer-fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
